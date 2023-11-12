@@ -1,0 +1,27 @@
+{
+    "name": "alphamission",
+    "displayName": "alphamission",
+    "description": "SNK Alpha Mission gateware IP Core",
+    "author": "RndMnkIII",
+    "version": "1.0.0",
+    "license": "GPL-3.0-or-later",
+    "repository": "https://github.com/RndMnkIII/PocketAlphaMission",
+    "keywords": [
+        "ecosystem:gateman"
+    ],
+    "scripts": {
+        "verilator": "echo \"Error: no simulation specified\" && exit 1",
+        "build:pocket": "quartus_sh --flow compile projects/alphamission_pocket.qpf",
+        "program:pocket": "quartus_pgm -m jtag -c 1 -o \"p;projects/output_files/alphamission_pocket.sof@1\""
+    },
+    "hardware": {
+        "id": "snk-triple-z80",
+        "name": "SNK Triple Z80",
+        "year": 1985,
+        "manufacturer": "SNK"
+    },
+    "platforms": {
+        "pocket": "1.3.0"
+    },
+    "modules": {}
+}

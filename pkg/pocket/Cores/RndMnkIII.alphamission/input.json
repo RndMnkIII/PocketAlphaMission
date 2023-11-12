@@ -1,0 +1,39 @@
+{
+    "input": {
+        "magic": "APF_VER_1",
+        "controllers": [
+            {
+                "type": "default",
+                "buttons": 3,
+                "ways": 8,
+                "mappings": [
+                    {
+                        "id": 0,
+                        "name": "Missile",
+                        "key": "pad_btn_b"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Fire",
+                        "key": "pad_btn_y"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Armor",
+                        "key": "pad_btn_a"
+                    },
+                    {
+                        "id": 20,
+                        "name": "Start",
+                        "key": "pad_btn_start"
+                    },
+                    {
+                        "id": 21,
+                        "name": "Coin",
+                        "key": "pad_btn_select"
+                    }
+                ]
+            }
+        ]
+    }
+}

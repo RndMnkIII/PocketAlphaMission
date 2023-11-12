@@ -1,0 +1,37 @@
+# ==============================================================================
+# Quartus Prime QIP Index File
+# ==============================================================================
+# RTL
+# ==============================================================================
+set_global_assignment -name QIP_FILE           [file join $::quartus(qip_path) "ttl/index.qip"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "back1/AlphaMissionCore_Back1_sync.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "clocks/AlphaMissionCore_Clocks_Cen.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "clocks/AlphaMissionCore_Clocks_Sync.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "clocks/pal16r6_15B_sync.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "cpuA_B/AlphaMissionCore_CPU_A_B_sync.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "cpuA_B/pal16l6c_A1_nodly.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "final_video/AlphaMissionCore_FinalVideo_sync.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "final_video/module RGB4bit_LUT.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "final_video/pal16l8a_F9_nodly.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "front/AlphaMissionCore_Front_sync.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "front/AlphaMissionCore_LineBuffer_sync.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "POR.v"]
+set_global_assignment -name VHDL_FILE          [file join $::quartus(qip_path) "ram/dpram_dc.vhd"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "ram/rom_loader.sv"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/ROM_sync.v"]
+set_global_assignment -name VHDL_FILE          [file join $::quartus(qip_path) "ram/spram.vhd"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/SRAM_dual_sync.v"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/SRAM_dual_sync_init.v"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/SRAM_sync.v"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/SRAM_sync_init.v"]
+set_global_assignment -name VERILOG_FILE       [file join $::quartus(qip_path) "ram/SRAM_sync_noinit.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "registers/AlphaMissionCore_Registers_sync.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "side/AlphaMissionCore_Side_sync.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "SNK_TripleZ80.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "sound/AlphaMissionCore_Sound_sync.sv"]
+
+# ==============================================================================
+# MODULES
+# ==============================================================================
+set_global_assignment -name QIP_FILE           [file join $::quartus(qip_path) "../modules/cpu-t80/index.qip"]
+set_global_assignment -name QIP_FILE           [file join $::quartus(qip_path) "../modules/sound-ym3526/index.qip"]
