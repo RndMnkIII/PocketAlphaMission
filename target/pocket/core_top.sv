@@ -54,7 +54,7 @@ module core_top
          parameter MUTE_PAUSE   = 1,       //! Mute Audio on Pause
          // Gamepad/Joystick
          parameter JOY_PADS     = 2,       //! Total Number of Gamepads
-         parameter JOY_ALT      = 1,       //! 2 Players Alternate
+         parameter JOY_ALT      = 0,       //! 2 Players Alternate
          // Data I/O - [MPU -> FPGA]
          parameter DIO_MASK     = 4'h0,    //! Upper 4 bits of address
          parameter DIO_AW       = 27,      //! Address Width
@@ -821,9 +821,8 @@ module core_top
     wire       p1_btn_r1, p1_btn_r2, p1_btn_r3;
     wire       p1_select, p1_start;
     // - Analog
-    //Not used by ASO
-    // wire       j1_up,     j1_down,   j1_left,   j1_right;
-    // wire [7:0] j1_lx,     j1_ly,     j1_rx,     j1_ry;
+    wire       j1_up,     j1_down,   j1_left,   j1_right;
+    wire [7:0] j1_lx,     j1_ly,     j1_rx,     j1_ry;
 
     // Player 2
     // - DPAD
@@ -833,9 +832,8 @@ module core_top
     wire       p2_btn_r1, p2_btn_r2, p2_btn_r3;
     wire       p2_select, p2_start;
     // - Analog
-    ////Not used by ASO
-    // wire       j2_up,     j2_down,   j2_left,   j2_right;
-    // wire [7:0] j2_lx,     j2_ly,     j2_rx,     j2_ry;
+    wire       j2_up,     j2_down,   j2_left,   j2_right;
+    wire [7:0] j2_lx,     j2_ly,     j2_rx,     j2_ry;
 
     // Single Player or Alternate 2 Players for Arcade
     wire m_start1, m_start2;
@@ -861,14 +859,14 @@ module core_top
                 .p1_l2     ( p1_btn_l2 ), .p1_r2     ( p1_btn_r2 ),
                 .p1_l3     ( p1_btn_l3 ), .p1_r3     ( p1_btn_r3 ),
                 .p1_se     ( p1_select ), .p1_st     ( p1_start  ),
-                // .j1_up     ( j1_up     ), .j1_down   ( j1_down   ),
-                // .j1_left   ( j1_left   ), .j1_right  ( j1_right  ),
-                // .j1_lx     ( j1_lx     ), .j1_ly     ( j1_ly     ),
-                // .j1_rx     ( j1_rx     ), .j1_ry     ( j1_ry     ),
-                .j1_up     ( {1'b0}), .j1_down   ( {1'b0}  ),
-                .j1_left   ( {1'b0}), .j1_right  ( {1'b0}  ),
-                .j1_lx     ( {1'b0}), .j1_ly     ( {1'b0}  ),
-                .j1_rx     ( {1'b0}), .j1_ry     ( {1'b0}  ),
+                .j1_up     ( j1_up     ), .j1_down   ( j1_down   ),
+                .j1_left   ( j1_left   ), .j1_right  ( j1_right  ),
+                .j1_lx     ( j1_lx     ), .j1_ly     ( j1_ly     ),
+                .j1_rx     ( j1_rx     ), .j1_ry     ( j1_ry     ),
+                // .j1_up     ( {1'b0}), .j1_down   ( {1'b0}  ),
+                // .j1_left   ( {1'b0}), .j1_right  ( {1'b0}  ),
+                // .j1_lx     ( {1'b0}), .j1_ly     ( {1'b0}  ),
+                // .j1_rx     ( {1'b0}), .j1_ry     ( {1'b0}  ),
                 //Player 2
                 .p2_up     ( p2_up     ), .p2_down   ( p2_down   ),
                 .p2_left   ( p2_left   ), .p2_right  ( p2_right  ),
@@ -878,14 +876,14 @@ module core_top
                 .p2_l2     ( p2_btn_l2 ), .p2_r2     ( p2_btn_r2 ),
                 .p2_l3     ( p2_btn_l3 ), .p2_r3     ( p2_btn_r3 ),
                 .p2_se     ( p2_select ), .p2_st     ( p2_start  ),
-                // .j2_up     ( j2_up     ), .j2_down   ( j2_down   ),
-                // .j2_left   ( j2_left   ), .j2_right  ( j2_right  ),
-                // .j2_lx     ( j2_lx     ), .j2_ly     ( j2_ly     ),
-                // .j2_rx     ( j2_rx     ), .j2_ry     ( j2_ry     ),
-                .j2_up     ( {1'b0}), .j2_down   ( {1'b0}),
-                .j2_left   ( {1'b0}), .j2_right  ( {1'b0}),
-                .j2_lx     ( {1'b0}), .j2_ly     ( {1'b0}),
-                .j2_rx     ( {1'b0}), .j2_ry     ( {1'b0}),
+                .j2_up     ( j2_up     ), .j2_down   ( j2_down   ),
+                .j2_left   ( j2_left   ), .j2_right  ( j2_right  ),
+                .j2_lx     ( j2_lx     ), .j2_ly     ( j2_ly     ),
+                .j2_rx     ( j2_rx     ), .j2_ry     ( j2_ry     ),
+                // .j2_up     ( {1'b0}), .j2_down   ( {1'b0}),
+                // .j2_left   ( {1'b0}), .j2_right  ( {1'b0}),
+                // .j2_lx     ( {1'b0}), .j2_ly     ( {1'b0}),
+                // .j2_rx     ( {1'b0}), .j2_ry     ( {1'b0}),
                 // Single Player or Alternate 2 Players for Arcade
                 .m_coin    ( m_coin    ),                           // Coinage P1 or P2
                 .m_up      ( m_up      ), .m_down    ( m_down    ), // Up/Down
@@ -980,8 +978,10 @@ module core_top
     //! ------------------------------------------------------------------------
     wire  [3:0] R,G,B;
 
-    wire [15:0] PLAYER1 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start1, m_coin};
-    wire [15:0] PLAYER2 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start2, m_coin};
+    // wire [15:0] PLAYER1 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start1, m_coin};
+    // wire [15:0] PLAYER2 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start2, m_coin};
+    wire [15:0] PLAYER1 = ~{2'b00, p1_up, p1_down, p1_right, p1_left , svc_sw, 4'b0000, p1_btn_a, p1_btn_b, p1_btn_y, p1_start, p1_select};
+    wire [15:0] PLAYER2 = ~{2'b00, p2_up, p2_down, p2_right, p2_left , svc_sw, 4'b0000, p2_btn_a, p2_btn_b, p2_btn_y, p2_start, p2_select};
 
     //To enter service mode:  
     //tnk3: keep 1 pressed during boot

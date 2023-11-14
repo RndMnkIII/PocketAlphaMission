@@ -1,15 +1,11 @@
-# SNK Triple Z80 Compatible Gateware IP Core (WIP)
+# SNK ASO/Alpha Mission Compatible Gateware IP Core
 
 Follow any core updates and news on my Twitter acount [@RndMnkIII](https://twitter.com/RndMnkIII). this project is a hobby but it requires investing in arcade game boards and specific tools, so any donation is welcome: [https://ko-fi.com/rndmnkiii](https://ko-fi.com/rndmnkiii).
 
 ## About
 
-This core originated from the core project for __SNK's__ __Alpha__ __Mission__ arcade game. In the end, it has become a multigame project where new games will be added, encompassed in the so-called __"SNK Triple Z80"__ platform, this groups together several games that were developed by SNK around the mid-1980s using a similar hardware architecture. For a complete reference of the list of games consult
+This core originated from the core project for __SNK's__ __Alpha__ __Mission__ arcade game. Encompass the __"SNK Triple Z80"__ platform, this groups together several games that were developed by SNK around the mid-1980s using a similar hardware architecture. For a complete reference of the list of games consult
 [https://github.com/mamedev/mame/blob/master/src/mame/drivers/snk.cpp](https://github.com/mamedev/mame/blob/master/src/mame/drivers/snk.cpp).
-
-I am currently making the core of other of these games, as I develop them I will incorporate modular features to use certain hardware parts depending on the game that is loaded in the core. The idea is to use a single core for all these games or try to modularize it as much as possible. Next games that I've planned to incorporate: Ikari Warriors, T.N.K. III, Psycho Soldier and more.
-
-While it is in this development process, it will be appreciated that parallel developments of these games are not made to those of the author based on the code of this project or my previous project for the Alpha Mission standalone game core, although I think it is good that it is ported to other platforms apart from MiSTer. Respecting that if I would like to receive suggestions or advice from other developers or users about this core.
 
 ## Compatible Games
 
@@ -22,6 +18,10 @@ While it is in this development process, it will be appreciated that parallel de
 | Arian Mission                |  ✅    |
 
 ## Credits and acknowledgment
+* First of all I want to thank __Marcus Jordan / Boogermann__ [@marcusjordan](https://twitter.com/marcusjordan) for his help, without which this port would not have been possible and for making it easier for the developers to port cores to the Analogue Pocket using the [Gateman Pocket](https://github.com/opengateware/gateman-pocket) tool.
+
+* __Adam Gastineau__ for his support of the [OpenFPGA](https://www.analogue.co/developer/docs/overview) initiative by publishing information and tools to facilitate the development/port of cores on the Analogue Pocket platform: https://github.com/agg23/analogue-pocket-utils
+
 
 * To all Ko-fi contributors for supporting this project: __@bdlou__, __Peter Bray__, __Nat__, __Funkycochise__, __David__, __Kevin Coleman__, __Denymetanol__, __Schermobianco__, __TontonKaloun__, __Wark91__, __Dan__, __Beaps__.
 * __@caiusarcade__ for their assistance in using files and converting PLD files.
