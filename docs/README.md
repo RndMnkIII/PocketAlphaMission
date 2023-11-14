@@ -1,3 +1,9 @@
+[![Alpha Mission Marqueé](alpha-mission_marquee.jpg)](#)
+
+---
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/rndmnkiii?style=social)](https://twitter.com/rndmnkiii)
+
 # SNK ASO/Alpha Mission Compatible Gateware IP Core
 
 Follow any core updates and news on my Twitter acount [@RndMnkIII](https://twitter.com/RndMnkIII). this project is a hobby but it requires investing in arcade game boards and specific tools, so any donation is welcome: [https://ko-fi.com/rndmnkiii](https://ko-fi.com/rndmnkiii).
@@ -16,6 +22,18 @@ This core originated from the core project for __SNK's__ __Alpha__ __Mission__ a
 | ASO - Armored Scrum Object   |  ✅    |
 | Alpha Mission, Arian Mission |  ✅    |
 | Arian Mission                |  ✅    |
+
+### ROM Instructions
+
+1. Download [ORCA](https://github.com/opengateware/tools-orca/releases/latest) (Open ROM Conversion Assistant)
+2. Download the [ROM Recipes](https://github.com/opengateware/arcade-galaga/releases/download/v0.1.0/rom-recipes_0.1.0.zip) and extract to your computer.
+3. Copy the required MAME `.zip` files into the `roms` folder.
+4. Inside the `tools` execute the script related to your system.
+   1. **Windows:** right click `make_roms.ps1` and select `Run with Powershell`
+   2. **Linux and MacOS:** run script `make_roms.sh`.
+5. After the convertion is completed, copy the `Assets` folder to the Root of your SD Card.
+
+> **Note:** Make sure your `.rom` files are in the `Assets/alphamission/common` directory.
 
 ## Credits and acknowledgment
 * First of all I want to thank __Marcus Jordan / Boogermann__ [@marcusjordan](https://twitter.com/marcusjordan) for his help, without which this port would not have been possible and for making it easier for the developers to port cores to the Analogue Pocket using the [Gateman Pocket](https://github.com/opengateware/gateman-pocket) tool.
