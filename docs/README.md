@@ -11,7 +11,7 @@ Follow any core updates and news on my Twitter acount [@RndMnkIII](https://twitt
 ## About
 
 This core originated from the core project for __SNK's__ __Alpha__ __Mission__ arcade game. Encompass the __"SNK Triple Z80"__ platform, this groups together several games that were developed by SNK around the mid-1980s using a similar hardware architecture. For a complete reference of the list of games consult
-[https://github.com/mamedev/mame/blob/master/src/mame/drivers/snk.cpp](https://github.com/mamedev/mame/blob/master/src/mame/drivers/snk.cpp).
+[https://github.com/mamedev/mame/blob/master/src/mame/snk/snk.cpp](https://github.com/mamedev/mame/blob/master/src/mame/snk/snk.cpp).
 
 ## Compatible Games
 
@@ -26,7 +26,7 @@ This core originated from the core project for __SNK's__ __Alpha__ __Mission__ a
 ### ROM Instructions
 
 1. Download [ORCA](https://github.com/opengateware/tools-orca/releases/latest) (Open ROM Conversion Assistant)
-2. Download the [ROM Recipes](https://github.com/opengateware/arcade-galaga/releases/download/v0.1.0/rom-recipes_0.1.0.zip) and extract to your computer.
+2. Download the [ROM Recipes](https://github.com/RndMnkIII/PocketAlphaMission/releases/tag/alphamission_rom-recipes-v1.0) and extract to your computer.
 3. Copy the required MAME `.zip` files into the `roms` folder.
 4. Inside the `tools` execute the script related to your system.
    1. **Windows:** right click `make_roms.ps1` and select `Run with Powershell`
@@ -34,6 +34,10 @@ This core originated from the core project for __SNK's__ __Alpha__ __Mission__ a
 5. After the convertion is completed, copy the `Assets` folder to the Root of your SD Card.
 
 > **Note:** Make sure your `.rom` files are in the `Assets/alphamission/common` directory.
+
+## Installation
+
+To install the core, copy the content of [latest release file](https://github.com/RndMnkIII/PocketAlphaMission/releases/download/alphamission-pocket-v1.0/rndmnkiii.alphamission_pocket-v1.0.zip) over the root of Pocket SD card.
 
 ## Credits and acknowledgment
 * First of all I want to thank __Marcus Jordan / Boogermann__ [@marcusjordan](https://twitter.com/marcusjordan) for his help, without which this port would not have been possible and for making it easier for the developers to port cores to the Analogue Pocket using the [Gateman Pocket](https://github.com/opengateware/gateman-pocket) tool.
