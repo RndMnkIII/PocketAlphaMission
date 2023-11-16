@@ -11,6 +11,35 @@
                 "value": 1
             },
             {
+                "name": "Screen Rotation",
+                "port": "EXT",
+                "id": 203,
+                "type": "list",
+                "enabled": true,
+                "persist": true,
+                "address": "0xF4000000",
+                "defaultval": 0,
+                "mask": "0xFFFFFFFC",
+                "options": [
+                    {
+                        "name": "90 degrees",
+                        "value": "0x00000000"
+                    },
+                    {
+                        "name": "0 degrees",
+                        "value": "0x00000001"
+                    },
+                    {
+                        "name": "180 degrees",
+                        "value": "0x00000002"
+                    },
+                    {
+                        "name": "270 degrees",
+                        "value": "0x00000003"
+                    }
+                ]
+            },
+            {
                 "name": "Scanlines",
                 "id": 100,
                 "type": "list",
@@ -86,7 +115,7 @@
             },
             {
                 "name": "DBG: Ena. Layer Front",
-                "id": 203,
+                "id": 204,
                 "type": "check",
                 "enabled": true,
                 "persist": true,

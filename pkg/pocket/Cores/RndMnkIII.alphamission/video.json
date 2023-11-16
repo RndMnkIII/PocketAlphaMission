@@ -9,7 +9,31 @@
                 "aspect_h": 3,
                 "rotation": 90,
                 "mirror": 0
-            }
+            },
+            {
+                "width": 288,
+                "height": 216,
+                "aspect_w": 5,
+                "aspect_h": 3,
+                "rotation": 0,
+                "mirror": 0
+            },
+            {
+                "width": 288,
+                "height": 216,
+                "aspect_w": 5,
+                "aspect_h": 3,
+                "rotation": 180,
+                "mirror": 0
+            },
+            {
+                "width": 288,
+                "height": 216,
+                "aspect_w": 4,
+                "aspect_h": 3,
+                "rotation": 270,
+                "mirror": 0
+            },
         ]
     }
 }

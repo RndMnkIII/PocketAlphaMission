@@ -24,14 +24,19 @@
                     },
                     {
                         "id": 20,
-                        "name": "Start",
+                        "name": "Start1",
                         "key": "pad_btn_start"
                     },
                     {
                         "id": 21,
                         "name": "Coin",
                         "key": "pad_btn_select"
-                    }
+                    },
+                    {
+                        "id": 22,
+                        "name": "Start2",
+                        "key": "pad_trig_l"
+                      },
                 ]
             }
         ]

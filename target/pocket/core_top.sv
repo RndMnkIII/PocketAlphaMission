@@ -683,6 +683,9 @@ module core_top
 
     assign core_de = ~(core_hb | core_vb);
 
+    // Rotate screen from menu selection
+    assign video_preset = {1'b0, ext_sw0[1:0]};
+
 
     wire [23:0] s_video_rgb;
     wire        s_video_hs, s_video_vs, s_video_de;
@@ -980,8 +983,12 @@ module core_top
 
     // wire [15:0] PLAYER1 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start1, m_coin};
     // wire [15:0] PLAYER2 = ~{2'b00, m_up, m_down, m_right, m_left , svc_sw, 4'b0000, m_btn3, m_btn2, m_btn1, m_start2, m_coin};
+    //Related how the hardware works:
+    //In alternate two player "Upright" mode only uses PLAYER1 controls for both players.
+    //In alternate two player "Cocktail" mode uses PLAYER1 and PLAYER2 for each player.
+    //For two player "Upright" mode is needed to map START2 button to a button on PLAYER1 controls.
     wire [15:0] PLAYER1 = ~{2'b00, p1_up, p1_down, p1_right, p1_left , svc_sw, 4'b0000, p1_btn_a, p1_btn_b, p1_btn_y, p1_start, p1_select};
-    wire [15:0] PLAYER2 = ~{2'b00, p2_up, p2_down, p2_right, p2_left , svc_sw, 4'b0000, p2_btn_a, p2_btn_b, p2_btn_y, p2_start, p2_select};
+    wire [15:0] PLAYER2 = ~{2'b00, p2_up, p2_down, p2_right, p2_left , svc_sw, 4'b0000, p2_btn_a, p2_btn_b, p2_btn_y, {p2_start | p1_btn_l1}, p2_select};
 
     //To enter service mode:  
     //tnk3: keep 1 pressed during boot
